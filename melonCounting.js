@@ -57,7 +57,7 @@ function countMelons(melonList) {
  * Take in a list and return a dictionary of melons by melon type.
  */  
 
-  const melonCounts={};
+  const melonCounts = {};
   for (const melon of melonList) {
     if (melonCounts.hasOwnProperty(melon)) {
         melonCounts[melon] += 1;
@@ -69,3 +69,17 @@ function countMelons(melonList) {
 }
 
 console.log(countMelons(melonsToAdd));
+
+const countingMelons = melonList => {
+  const melonCounts = {};
+  for (const melon of melonList){
+    if (melonCounts[melon]) {
+        melonCounts[melon] += 1;
+    } else {
+        melonCounts[melon] = 1;
+    }
+  }
+  return melonCounts
+}
+
+console.log(countingMelons(melonsToAdd));
